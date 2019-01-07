@@ -1,0 +1,32 @@
+{
+  "name": "tf2-sku",
+  "version": "1.0.0",
+  "description": "Format items as strings or objects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicklason/node-tf2-sku.git"
+  },
+  "author": {
+    "name": "Nicklas Marc Pedersen",
+    "url": "https://nicklas.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nicklason/node-tf2-sku/issues"
+  },
+  "homepage": "https://github.com/Nicklason/node-tf2-sku#readme",
+  "dependencies": {
+    "defaults": "^1.0.3",
+    "object-prettify": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-google": "^0.11.0",
+    "nodemon": "^1.18.9"
+  }
+}
