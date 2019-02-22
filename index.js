@@ -12,7 +12,8 @@ const TEMPLATE = {
     paintkit: null,
     wear: null,
     quality2: null,
-    target: null
+    target: null,
+    craftnumber: null
 };
 
 /**
@@ -64,6 +65,8 @@ class SKU {
                 attributes.wear = parseInt(attribute.substring(1));
             } else if (attribute.startsWith('td') && isNum(attribute.substring(2))) {
                 attributes.target = parseInt(attribute.substring(2));
+            } else if (attribute.startsWith('n') && isNum(attribute.substring(1))) {
+                attributes.craftnumber = parseInt(attribute.substring(1));
             }
         }
 
@@ -110,6 +113,9 @@ class SKU {
         }
         if (item.festive === true) {
             sku += ';festive';
+        }
+        if (item.craftnumber !== null) {
+            sku += `;n${item.craftnumber}`;
         }
 
         return sku;
