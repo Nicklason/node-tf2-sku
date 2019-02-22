@@ -9,7 +9,9 @@
   },
   "rules": {
     "comma-dangle": [2, "never"],
-    "indent": [2, 4, { "SwitchCase": 1 }],
+    "indent": [2, 4, {
+      "SwitchCase": 1
+    }],
     "keyword-spacing": 2,
     "linebreak-style": 0,
     "max-len": [0],
