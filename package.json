@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "release": "np --no-cleanup"
   },
   "repository": {
     "type": "git",
@@ -25,9 +26,8 @@
     "object-prettify": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.1",
     "eslint-config-google": "^0.11.0",
     "nodemon": "^1.18.10"
-  },
-  "private": true
+  }
 }
