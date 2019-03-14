@@ -4,7 +4,7 @@ Format items as strings or objects
 
 ## What is an SKU
 
-SKU is the abbreviation of stock keeping unit. These SKUs makes it possible to represent items as readable strings, and convert them to and from objects.
+SKU is the abbreviation of stock keeping unit. These SKUs make it possible to represent items as readable strings, and convert them to and from objects.
 
 The SKU can safely be used to identify items, since they contain all information about them.
 
