@@ -88,7 +88,7 @@ class SKU {
 
         let sku = `${item.defindex};${item.quality}`;
 
-        if (item.effect !== null) {
+        if (item.effect) {
             sku += `;u${item.effect}`;
         }
         if (item.australium === true) {
@@ -97,30 +97,28 @@ class SKU {
         if (item.craftable === false) {
             sku += ';uncraftable';
         }
-        if (item.wear !== null) {
+        if (item.wear) {
             sku += `;w${item.wear}`;
         }
-        if (item.paintkit !== null) {
+        if (item.paintkit) {
             sku += `;pk${item.paintkit}`;
         }
-        if (item.quality2 !== null) {
-            if (item.quality2 == 11) {
-                sku += ';strange';
-            }
+        if (item.quality2 == 11) {
+            sku += ';strange';
         }
-        if (item.killstreak !== 0) {
+        if (typeof item.killstreak === 'number' && item.killstreak !== 0) {
             sku += `;kt-${item.killstreak}`;
         }
-        if (item.target !== null) {
+        if (item.target) {
             sku += `;td-${item.target}`;
         }
         if (item.festive === true) {
             sku += ';festive';
         }
-        if (item.craftnumber !== null) {
+        if (item.craftnumber) {
             sku += `;n${item.craftnumber}`;
         }
-        if (item.crateseries !== null) {
+        if (item.crateseries) {
             sku += `;c${item.crateseries}`;
         }
 
