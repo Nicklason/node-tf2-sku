@@ -14,7 +14,7 @@ const TEMPLATE = {
     quality2: null,
     target: null,
     craftnumber: null,
-    crateseries: null 
+    crateseries: null
 };
 
 /**
