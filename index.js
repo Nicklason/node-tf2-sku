@@ -13,7 +13,8 @@ const TEMPLATE = {
     wear: null,
     quality2: null,
     target: null,
-    craftnumber: null
+    craftnumber: null,
+    crateseries: null 
 };
 
 /**
@@ -67,6 +68,8 @@ class SKU {
                 attributes.target = parseInt(attribute.substring(2));
             } else if (attribute.startsWith('n') && isNum(attribute.substring(1))) {
                 attributes.craftnumber = parseInt(attribute.substring(1));
+            } else if (attribute.startsWith('c') && isNum(attribute.substring(1))) {
+                attributes.crateseries = parseInt(attribute.substring(1));
             }
         }
 
@@ -116,6 +119,9 @@ class SKU {
         }
         if (item.craftnumber !== null) {
             sku += `;n${item.craftnumber}`;
+        }
+        if (item.crateseries !== null) {
+            sku += `;c${item.crateseries}`;
         }
 
         return sku;
