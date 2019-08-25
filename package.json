@@ -1,6 +1,6 @@
 {
   "name": "tf2-sku",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Format items as strings or objects",
   "main": "index.js",
   "scripts": {
