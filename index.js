@@ -14,7 +14,9 @@ const TEMPLATE = {
     quality2: null,
     target: null,
     craftnumber: null,
-    crateseries: null
+    crateseries: null,
+    output: null,
+    outputQuality: null
 };
 
 /**
@@ -70,6 +72,10 @@ class SKU {
                 attributes.craftnumber = parseInt(attribute.substring(1));
             } else if (attribute.startsWith('c') && isNum(attribute.substring(1))) {
                 attributes.crateseries = parseInt(attribute.substring(1));
+            } else if (attribute.startsWith('od') && isNum(attribute.substring(2))) {
+                attributes.output = parseInt(attribute.substring(2));
+            } else if (attribute.startsWith('oq') && isNum(attribute.substring(2))) {
+                attributes.outputQuality = parseInt(attribute.substring(2));
             }
         }
 
@@ -120,6 +126,9 @@ class SKU {
         }
         if (item.crateseries) {
             sku += `;c${item.crateseries}`;
+        }
+        if (item.output) {
+            sku += `;od-${item.crateseries}`;
         }
 
         return sku;
