@@ -128,7 +128,10 @@ class SKU {
             sku += `;c${item.crateseries}`;
         }
         if (item.output) {
-            sku += `;od-${item.crateseries}`;
+            sku += `;od-${item.output}`;
+        }
+        if (item.outputQuality) {
+            sku += `;oq-${item.outputQuality}`;
         }
 
         return sku;
